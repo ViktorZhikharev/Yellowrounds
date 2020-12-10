@@ -1,13 +1,13 @@
 import sys, random
-from PyQt5 import uic
+from UI import Ui_MainWindow
 from PyQt5.QtGui import QPainter, QColor, QFont
 from PyQt5.QtWidgets import *
 
 
-class MyWidget(QMainWindow):
+class MyWidget(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('UI.ui', self)
+        self.setupUi(self)
         self.rb1.clicked.connect(self.col1)
         self.cirk = []
 
