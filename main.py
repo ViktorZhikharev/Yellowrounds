@@ -25,8 +25,7 @@ class MyWidget(QMainWindow, Ui_MainWindow):
         qp.end()
 
     def draw(self, qp):
-        col = QColor()
-        col.setNamedColor('yellow')
+        col = QColor(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
         for i in range(len(self.cirk)):
             qp.setBrush(col)
             qp.drawEllipse(self.cirk[i][0], self.cirk[i][1], self.cirk[i][2], self.cirk[i][2])
