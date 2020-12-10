@@ -7,7 +7,7 @@ from PyQt5.QtWidgets import *
 class MyWidget(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('flags.ui', self)
+        uic.loadUi('UI.ui', self)
         self.rb1.clicked.connect(self.col1)
 
     def col1(self):
